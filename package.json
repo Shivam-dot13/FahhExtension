@@ -1,0 +1,45 @@
+{
+  "name": "errorsiren",
+  "displayName": "ErrorSiren",
+  "description": "Plays a sound automatically when a terminal command fails or returns an error code.",
+  "version": "0.0.1",
+  "publisher": "your-name-here", 
+  "engines": {
+    "vscode": "^1.85.0" 
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "ErrorSiren",
+      "properties": {
+        "errorsiren.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable the error sound."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "dependencies": {
+    "play-sound": "^1.1.6"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.39.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
